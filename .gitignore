@@ -3,3 +3,8 @@ __pycache__/
 db/*
 log/*
 hashtags.txt
+bin/*
+include/*
+lib/*
+lib64/*
+share/*
