@@ -16,7 +16,6 @@ api = twitter.Api(consumer_key = api_data['consumer_key'],
                       access_token_secret = api_data['access_token_secret'],)
 
 # Listado de usuarios a retweetear!
-# to_retweet = ["Patita96677918","RomyAmesticaA","activatucalle","Manu_Concejal","arleguivergara","AC3E_cl","CicloviaSNA","ForoMundialBici","Andes_Chile_Ong","Map8ong","mueveteCL","mfc_valpo","Instituto3IE","vgrimblatt","HaroldMesias","VAN_BUREN_","sitiodelsuceso","MEspinozaD7"]
 to_retweet = tools.get_usernames()
 
 for friend in to_retweet:

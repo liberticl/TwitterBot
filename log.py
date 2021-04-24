@@ -11,6 +11,10 @@ month = datetime.now(tz).strftime("%B")
 log = month + '/' + datetime.now(tz).strftime("%d")
 
 def init():
+	# Revisa directorio log y lo crea si es necesario
+	if not os.path.isdir(PATH + 'log/'):
+		os.mkdir(PATH + 'log)
+	
 	# Revisa directorio anual y lo crea si es necesario
 	if not os.path.isdir(PATH + 'log/' + year + '/'):
 		os.mkdir(PATH + 'log/' + year)
