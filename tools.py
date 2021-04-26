@@ -4,8 +4,8 @@ import os
 import yaml
 
 
-PATH = "/home/francisco/python_scripts/Twitter/fco_vergara12/"
-DB_PATH = "/home/francisco/python_scripts/Twitter/fco_vergara12/db/"
+PATH = os.path.abspath(os.getcwd()) + "/"
+DB_PATH = PATH + "/db/"
 
 # Obtiene el listado de hashtags desde el archivo 'hashtags.txt'
 def get_ht():
