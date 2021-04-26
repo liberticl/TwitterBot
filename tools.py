@@ -3,8 +3,7 @@
 import os
 import yaml
 
-
-PATH = os.path.abspath(os.getcwd()) + "/"
+PATH = os.path.dirname(os.path.realpath(__file__)) + "/"
 DB_PATH = PATH + "/db/"
 
 # Obtiene el listado de hashtags desde el archivo 'hashtags.txt'

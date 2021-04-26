@@ -7,7 +7,12 @@ import pytz
 from time import sleep
 from datetime import datetime
 
+tz = pytz.timezone('America/Santiago')
+start = datetime.now(tz).strftime("%H:%M:%S") 
+print("Iniciado por última vez a las " + start)
+
 log.init()
+MY_TWITTER = 'fco_vergara12'
 
 api_data = tools.get_credentials()
 api = twitter.Api(consumer_key = api_data['consumer_key'],
@@ -61,11 +66,10 @@ for friend in to_retweet:
 		if(len(tweet.user_mentions) > 0):
 			for mentioned in tweet.user_mentions:
 				relation = api.LookupFriendship(user_id = mentioned.id)
-				if(relation[0].following == False and mentioned.screen_name != 'fco_vergara12'):
+				if(relation[0].following == False and mentioned.screen_name != MY_TWITTER):
 					api.CreateFriendship(user_id = mentioned.id)
 					log.follow(mentioned.name,mentioned.screen_name)
 					sleep(5)
 
-tz = pytz.timezone('America/Santiago')
 time = datetime.now(tz).strftime("%H:%M:%S") 
-print("Ejecutado por última vez a las " + time)
+print("Finalizado por última vez a las " + time)

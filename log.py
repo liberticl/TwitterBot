@@ -4,7 +4,7 @@ import os
 import pytz
 from datetime import datetime
 
-PATH = os.path.abspath(os.getcwd()) + "/"
+PATH = os.path.dirname(os.path.realpath(__file__)) + "/"
 tz = pytz.timezone('America/Santiago')
 year = datetime.now(tz).strftime("%Y") 
 month = datetime.now(tz).strftime("%B")
