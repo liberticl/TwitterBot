@@ -1,10 +1,11 @@
-__pycache__/
+__pycache__
 .api_data.yml
 db/*
 log/*
 hashtags.txt
-bin/*
-include/*
-lib/*
-lib64/*
-share/*
+bin
+include
+lib
+lib64
+share
+pyvenv.cfg
