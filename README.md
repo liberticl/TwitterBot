@@ -1,3 +1,5 @@
+# DESDE QUE TWITTER API ES DE PAGO, ESTE REPOSITORIO NO ES ÚTIL.
+
 # Twitter Bot
 Un bot para dar like y retweet a las cuentas que desees! Además, sigue a las cuentas mencionadas en los RT que realices.
 
